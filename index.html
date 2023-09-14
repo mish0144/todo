@@ -1,0 +1,46 @@
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo</title>
+</head>
+<body>
+    <header>
+    
+    </header>
+    <main>
+        <h1>Min Liste</h1>
+        <div class="fields">
+            <input type="text" id="textfield" placeholder="Skriv opgaven her">
+            <div id="prioritydiv">
+                <select name="priority" id="priority">
+                    <option value="prio3" disabled selected>Prioritet</option>
+                    <option value="prio1" id="prio1">Haster</option>
+                    <option value="prio2" id="prio2">Vigtigt</option>
+                    <option value="prio3" id="prio3">Ikke vigtig</option>
+                </select>
+            </div>
+            <button id="button">Tilføj</button>
+        </div>
+        <h2>Todo</h2>
+        <div id="todolist">
+        </div>
+        <h2>Done</h2>
+        <div id="donelist">
+        </div>
+        <div id="task" style="display: none;">
+            <div class="taskdiv">
+                <p>Ordne vasketøj</p>
+                    <div class="checkfield"></div>
+                    <div class="delete">X</div>
+            </div>
+        </div>
+            
+    </main>
+    <footer>
+
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

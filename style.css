@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: rgb(255, 244, 246);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-inline: auto;
+}
+
+main {
+    margin-inline: auto;
+    max-width: 700px;
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 50px;
+    border: rgb(174, 56, 95) solid 1px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(174, 56, 95);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.7rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(174, 56, 95);
+    margin-bottom: 10px;
+}
+
+input, select {
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+select {
+    background-color: palevioletred;
+    padding-left: 10px;
+    padding-right: 5px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+
+.fields {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Courier New', Courier, monospace;
+    flex-wrap: wrap;
+}
+
+#textfield {
+    width: 375px;
+    border: none;
+    border-bottom: rgb(174, 56, 95) solid 1px;
+    height: 30px;
+    background-color: rgb(255, 244, 246);
+}
+
+#priority {
+    height: 30px;
+}
+
+button {
+    height: 30px;
+    border: none;
+    color: white;
+    background-color: palevioletred;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+    width: 127px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#todolist {
+    background-color: pink;
+    border-radius: 10px; 
+    padding: 20px;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+
+#donelist {
+    background-color: palevioletred;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+#task, #taskdone, .taskdiv {
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(174, 56, 95);
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.checkfield {
+    width: 20px;
+    height: 20px;
+    border: rgb(174, 56, 95) solid 1px;
+}
+
+.delete {
+    margin-left: 5px;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+}
+
+#todolist .checkfield:hover {
+    background-color: rgb(174, 56, 95);
+}
+
+#donelist .checkfield {
+    background-color: rgb(174, 56, 95);
+}
+
+.taskdiv :first-child {
+    margin-right: auto;
+  }
+
+
