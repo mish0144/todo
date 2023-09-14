@@ -47,18 +47,19 @@ function addTask() {
   
   //nulstiller prioritet, når opgave er tilføjet
   document.getElementById('priority').value='disabled';
-
 }
 
 
 //Gør det muligt at trykke enter for at sætte sin opgave på todo listen
 let input = document.getElementById("textfield");
+
 input.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     event.preventDefault();
     document.getElementById("button").click();
   }
 });
+
 
 
 //VISNING AF LISTER
@@ -80,6 +81,7 @@ function displayList(array) {
     clone.querySelector(".checkfield").addEventListener('click', toggleTask(item));
     clone.querySelector(".delete").addEventListener("click", () => removeTask(item));
   })
+
    //gennemgår hver objekt på donelisten, viser den på listen, udskriver dens indhold samt gør det muligt at klikke på den slet og tjek felt. Den gemmer også data på localStorage
   doneItems.forEach((item) => {
     const clone = document.querySelector("#task").firstElementChild.cloneNode(true);
@@ -91,7 +93,6 @@ function displayList(array) {
 
   let string = JSON.stringify(myArr);
   localStorage.setItem("myArr", string);
-
 }
 
 
@@ -100,8 +101,11 @@ function displayList(array) {
 //Fjerner opgaven ved at filtrere objektet fra arrayet, samt gemmer det nye i localStorage og viser listen
 function removeTask(itemToRemove) {
   myArr = myArr.filter(task => task !== itemToRemove);
+
   localStorage.setItem('myArr', JSON.stringify(myArr));
+  
   console.log(myArr);
+  
   displayList(myArr);
 }
 
@@ -113,6 +117,7 @@ function toggleTask(obj) {
   return (target) => {
     console.log(obj, target)
     obj.done = !obj.done;
+    
     displayList(myArr);
   }
 }
